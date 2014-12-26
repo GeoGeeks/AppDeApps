@@ -1,0 +1,46 @@
+﻿<Page
+    x:Name="pageRoot"
+    x:Class="ArcGISRuntimeSDKDotNet_StoreSamples.Samples.AddPointOnTap"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:esri="using:Esri.ArcGISRuntime.Controls"  xmlns:lyr="using:Esri.ArcGISRuntime.Layers" 
+	xmlns:sym="using:Esri.ArcGISRuntime.Symbology">
+
+    <Page.Resources>
+        <sym:SimpleMarkerSymbol x:Key="RedMarkerSymbol" Color="Yellow" Size="12"  Style="X" />
+    </Page.Resources>
+
+    <Grid>
+        <esri:MapView x:Name="mapView1" MapViewTapped="mapView1_MapViewTapped">
+            <esri:Map   >
+                <lyr:ArcGISTiledMapServiceLayer
+				ServiceUri="http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer" />
+                <lyr:GraphicsLayer ID="MyGraphicsLayer">
+                    <lyr:GraphicsLayer.Renderer>
+                        <sym:SimpleRenderer Symbol="{StaticResource RedMarkerSymbol}" />
+                    </lyr:GraphicsLayer.Renderer>
+                </lyr:GraphicsLayer>
+            </esri:Map>
+        </esri:MapView>
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Label="Limpiar" Icon="Delete" Click="Button_Click_1"/>
+            <AppBarButton Label="Ayuda" Icon="Help">
+                <AppBarButton.Flyout>
+                    <Flyout>
+                        <StackPanel Orientation="Vertical" Height="150">
+                            <TextBlock Text="Agregar Punto" Margin="5" FontSize="20" FontWeight="Bold"/>
+                            <TextBlock Margin="10" HorizontalAlignment="Left" FontSize="15" TextWrapping="WrapWholeWords" >
+                                - Toque el mapa para agregar un punto.<LineBreak/>
+                                <LineBreak/>
+                                - 'Limpiar' borrará todos los puntos agregados.<LineBreak/>
+
+                            </TextBlock>
+                        </StackPanel>
+                    </Flyout>
+                </AppBarButton.Flyout>
+            </AppBarButton>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

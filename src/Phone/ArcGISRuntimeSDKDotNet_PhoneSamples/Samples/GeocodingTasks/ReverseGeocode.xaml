@@ -1,0 +1,77 @@
+﻿<Page
+    x:Class="ArcGISRuntimeSDKDotNet_PhoneSamples.Samples.ReverseGeocode"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:esri="using:Esri.ArcGISRuntime.Controls"  
+	xmlns:layers="using:Esri.ArcGISRuntime.Layers"
+    xmlns:symb="using:Esri.ArcGISRuntime.Symbology">
+
+    <Grid x:Name="layoutGrid" Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+		<Grid.Resources>
+			<symb:SimpleRenderer x:Key="MarkerRenderer">
+				<symb:SimpleRenderer.Symbol>
+					<symb:SimpleMarkerSymbol Color="Red" Size="8" Style="Diamond"/>
+				</symb:SimpleRenderer.Symbol>
+			</symb:SimpleRenderer>
+
+			<ControlTemplate x:Key="MapTipTemplate">
+				<Border Background="Black" BorderBrush="White" BorderThickness="2" Margin="4,0,0,4" CornerRadius="5">
+					<Border.Resources>
+						<Style TargetType="TextBlock">
+							<Setter Property="HorizontalAlignment" Value="Center" />
+							<Setter Property="FontSize" Value="10" />
+							<Setter Property="FontWeight" Value="Normal" />
+							<Setter Property="Foreground" Value="White" />
+						</Style>
+					</Border.Resources>
+
+					<StackPanel Margin="4">
+						<TextBlock Text="{Binding AddressFields[Address]}"/>
+
+						<TextBlock>
+                            <Run Text="{Binding AddressFields[City]}" />
+                            <Run Text=", " />
+                            <Run Text="{Binding AddressFields[Region]}" />
+                            <Run Text=" " />
+                            <Run Text="{Binding AddressFields[Postal]}" />
+						</TextBlock>
+
+						<TextBlock>
+                            <Run Text="{Binding Location.X}" />
+                            <Run Text=", " />
+                            <Run Text="{Binding Location.Y}" />
+						</TextBlock>
+					</StackPanel>
+				</Border>
+			</ControlTemplate>
+		</Grid.Resources>
+
+        <esri:MapView x:Name="MyMapView" WrapAround="True" 
+					  MapViewTapped="MyMapView_MapViewTapped">
+            <esri:Map>
+                <layers:ArcGISTiledMapServiceLayer 
+                    ServiceUri="http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer" />
+            </esri:Map>
+            <esri:MapView.GraphicsOverlays>
+                <esri:GraphicsOverlay x:Name="graphicsOverlay" Renderer="{StaticResource MarkerRenderer}" />
+            </esri:MapView.GraphicsOverlays>
+        </esri:MapView>
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Label="Reiniciar" Icon="RepeatAll" Click="ClearButton_Click" />
+            <AppBarButton Label="Ayuda" Icon="Help">
+                <AppBarButton.Flyout>
+                    <Flyout>
+                        <StackPanel Orientation="Vertical" Height="150">
+                            <TextBlock Text="Geocodificación Reversa" Margin="5" FontSize="20" FontWeight="Bold"/>
+                            <TextBlock Margin="10" HorizontalAlignment="Left" FontSize="15" TextWrapping="WrapWholeWords" >
+                                - Haga Click cerca de una calle. La dirección de la ubicación se mostrará
+                            </TextBlock>
+                        </StackPanel>
+                    </Flyout>
+                </AppBarButton.Flyout>
+            </AppBarButton>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

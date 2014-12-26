@@ -1,0 +1,125 @@
+﻿<Page
+    x:Class="ArcGISRuntimeSDKDotNet_StoreSamples.Samples.DrawAndEditGraphics"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ArcGISRuntimeSDKDotNet_StoreSamples.Samples"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Esri.ArcGISRuntime.Controls"
+    xmlns:layers="using:Esri.ArcGISRuntime.Layers"
+    xmlns:geometry="using:Esri.ArcGISRuntime.Geometry"
+    xmlns:symbology="using:Esri.ArcGISRuntime.Symbology"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" x:Name="LayoutRoot">
+        <Grid.Resources>
+            <symbology:SimpleMarkerSymbol x:Key="SMS"
+                                    Color="Red"
+                                    Style="Circle"
+                                    Size="10" />
+            <symbology:SimpleLineSymbol x:Key="SLS"
+                                  Color="Red"
+                                  Width="5" />
+            <symbology:SimpleFillSymbol x:Key="SFS"
+                                  Color="#66FF0000"
+                                  Style="Solid" />
+            <symbology:SimpleRenderer x:Key="MarkerRenderer"
+                                Symbol="{StaticResource SMS}" />
+            <symbology:SimpleRenderer x:Key="PolylineRenderer"
+                                Symbol="{StaticResource SLS}" />
+            <symbology:SimpleRenderer x:Key="PolygonRenderer"
+                                Symbol="{StaticResource SFS}" />
+        </Grid.Resources>
+        <controls:MapView x:Name="mapView1" MapViewTapped="mapView1_MapViewTapped">
+            <controls:Map>
+                <layers:ArcGISTiledMapServiceLayer ID="StreetMapLayer"
+                                              ServiceUri="http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer" />
+             
+            </controls:Map>
+
+            <controls:MapView.GraphicsOverlays>
+                <controls:GraphicsOverlay ID="PointGraphicsOverlay" Renderer="{StaticResource MarkerRenderer}" />
+                <controls:GraphicsOverlay ID="PolylineGraphicsOverlay" Renderer="{StaticResource PolylineRenderer}" />
+                <controls:GraphicsOverlay ID="PolygonGraphicsOverlay" Renderer="{StaticResource PolygonRenderer}" />
+            </controls:MapView.GraphicsOverlays>
+            
+        </controls:MapView>
+        <Border Background="Black" BorderThickness="0" CornerRadius="5"
+                HorizontalAlignment="Left" VerticalAlignment="Top" 
+                BorderBrush="Black">
+
+            <StackPanel Orientation="Vertical" Margin="10,5" >
+                <Button Content="Deshacer" FontSize="15" Width="30" Margin="0"
+                        Command="{Binding Editor.Undo, ElementName=mapView1}" />
+                <Button Content="Rehacer" FontSize="15" Width="30" Margin="0"
+                        Command="{Binding Editor.Redo, ElementName=mapView1}" />
+                <Button Content="Cancelar" FontSize="15" Width="30" Margin="0"
+                        Command="{Binding Editor.Cancel, ElementName=mapView1}" />
+                <Button Content="Listo" FontSize="15" Width="30" Margin="0"
+                        Command="{Binding Editor.Complete, ElementName=mapView1}" />
+                <Button Command="{Binding Editor.DeleteVertex, ElementName=mapView1}" FontSize="15" Width="30" Margin="0" >
+                    <TextBlock Text="Borrar Vertice" TextWrapping="WrapWholeWords"/>
+                </Button>
+            </StackPanel>
+        </Border>
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Label="Dibujar" Icon="Edit" Click="OnDrawButtonClicked"/>
+            <AppBarButton Label="Editar" Icon="Highlight" Click="OnDrawButtonClicked"/>
+            <AppBarButton Label="Opciones" Icon="Setting">
+                <AppBarButton.Flyout>
+                    <Flyout>
+                        <StackPanel Margin="10">
+                            <ComboBox x:Name="DrawShapes"/>
+                            <CheckBox x:Name="AddVertex" IsChecked="True">
+                                <TextBlock Text="Add Vertex" />
+                            </CheckBox>
+                            <CheckBox x:Name="MoveVertex"                
+                          IsChecked="True">
+                                <TextBlock Text="Move Vertex" />
+                            </CheckBox>
+                            <CheckBox x:Name="DeleteVertex" IsChecked="True" >
+                                <TextBlock Text="Delete Vertex" />
+                            </CheckBox>
+                            <CheckBox x:Name="MoveGeometry" IsChecked="True" >
+                                <TextBlock Text="Move Geometry" />
+                            </CheckBox>
+                            <CheckBox x:Name="Scale"  
+                          Content="Scale"
+                          IsChecked="True" />
+                            <CheckBox x:Name="Rotate"  
+                          Content="Rotate"
+                          IsChecked="True" />
+                            <CheckBox x:Name="MaintainAspectRatio" IsChecked="True">
+                                <TextBlock Text="Maintain Aspect Ratio" />
+                            </CheckBox>
+                        </StackPanel>
+                    </Flyout>
+                </AppBarButton.Flyout>
+            </AppBarButton>
+            <AppBarButton Label="Ayuda" Icon="Help">
+                <AppBarButton.Flyout>
+                    <Flyout>
+                        <StackPanel Orientation="Vertical" Height="350">
+                            <TextBlock Text="Dibujar y Editar" Margin="5" FontSize="20" FontWeight="Bold"/>
+                            <TextBlock Margin="10" HorizontalAlignment="Left" FontSize="15" TextWrapping="WrapWholeWords" >
+                                - Haga click en el icono de dibujar para empezar a dibujar. En opciones puede seleccionar la geometría. <LineBreak/>
+                                <LineBreak/>
+                                - Haga click en una figura para seleccionarla y luego en el icono de editar para comenzar a editarla.<LineBreak/>
+                                <LineBreak/>
+                                - Mueva los cuadros amarillos para dimensionar.<LineBreak/>
+                                <LineBreak/>
+                                - Haga click en los puntos blancos para agregar vértices.<LineBreak/>
+                                <LineBreak/>
+                                - Arrastre el cuadro azul para rotar.<LineBreak/>
+                                <LineBreak/>
+                                - En opciones puede activar o desactivar opciones de edición.
+                            </TextBlock>
+                        </StackPanel>
+                    </Flyout>
+                </AppBarButton.Flyout>
+            </AppBarButton>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

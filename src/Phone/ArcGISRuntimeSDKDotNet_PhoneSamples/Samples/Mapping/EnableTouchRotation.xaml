@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="ArcGISRuntimeSDKDotNet_StoreSamples.Samples.EnableTouchRotation"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ArcGISRuntimeSDKDotNet_StoreSamples.Samples"
+	xmlns:esri="using:Esri.ArcGISRuntime.Controls"  xmlns:lyr="using:Esri.ArcGISRuntime.Layers">
+    
+    <Grid>
+        <esri:MapView x:Name="mapView1" ManipulationMode="All">
+            <esri:Map  >
+                <lyr:ArcGISTiledMapServiceLayer
+				ServiceUri="http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer" />
+            </esri:Map>
+        </esri:MapView>
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarToggleButton Label="Bloquar Rotación" IsChecked="False" Icon="Rotate" Click="ToggleSwitch_Toggled"/>
+            <AppBarButton Label="Ayuda" Icon="Help">
+                <AppBarButton.Flyout>
+                    <Flyout>
+                        <StackPanel Orientation="Vertical" Height="150">
+                            <TextBlock Text="Bloquear Rotación" Margin="5" FontSize="20" FontWeight="Bold"/>
+                            <TextBlock Margin="10" HorizontalAlignment="Left" FontSize="15" TextWrapping="WrapWholeWords" >
+                                - Rote el mapa usando dos dedos.<LineBreak/>
+                                <LineBreak/>
+                                - Presione el botón bloquear rotación para habilitar o deshabilitar la rotación del mapa.<LineBreak/>
+                            </TextBlock>
+                        </StackPanel>
+                    </Flyout>
+                </AppBarButton.Flyout>
+            </AppBarButton>
+
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

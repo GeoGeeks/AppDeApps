@@ -1,0 +1,65 @@
+﻿<Page
+    x:Class="ArcGISRuntimeSDKDotNet_StoreSamples.Samples.Stretch"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
+    xmlns:esri="using:Esri.ArcGISRuntime.Controls"  xmlns:lyr="using:Esri.ArcGISRuntime.Layers">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <esri:MapView x:Name="mapView1"><esri:Map  >
+            <lyr:ArcGISImageServiceLayer ID="ImageServiceLayer" 
+                                          ServiceUri="http://sampleserver3.arcgisonline.com/ArcGIS/rest/services/Portland/CascadeLandsat/ImageServer" 
+                                          ImageFormat="PNG8"
+                                          NoData="0"/>
+            <lyr:ArcGISTiledMapServiceLayer Opacity="100" 
+                    ServiceUri="http://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Transportation/MapServer" />
+        </esri:Map></esri:MapView>
+
+        <Border x:Name="StretchOptions" Visibility="Collapsed" CornerRadius="5"
+                Background="#CC000000" HorizontalAlignment="Center" VerticalAlignment="Top"
+                        Margin="30,20,20,30" Padding="10">
+            <StackPanel Orientation="Vertical">
+                <TextBlock x:Name="ResponseTextBlock" Text="Defina las propiedades de entrada para la función raster stretch. Haga click en aplicar." 
+                           Width="200" TextAlignment="Left"  TextWrapping="Wrap" Margin="0,0,0,5"/>
+
+                <StackPanel Orientation="Vertical">
+                    <RadioButton x:Name="NoneCheckBox" Content="Ninguno" GroupName="StretchType" IsChecked="True"  Margin="3,0,0,0"/>
+                    <RadioButton x:Name="StandardDevCheckBox" Content="Desviacón Estándar" GroupName="StretchType"  Margin="3,0,0,0"/>
+                    <RadioButton x:Name="HistogramCheckBox" Content="Histograma" GroupName="StretchType" Margin="3,0,0,0" />
+                    <RadioButton x:Name="MinMaxCheckBox" Content="Min-Max" GroupName="StretchType"  Margin="3,0,0,0"/>
+                    <StackPanel Orientation="Horizontal" Margin="3">
+                        <TextBlock Text="Desviaciones Estándar" VerticalAlignment="Center" Margin="3"  />
+                        <TextBox x:Name="StnDevTextBox" Text="2" Width="20" Margin="10" InputScope="Number" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="3">
+                        <TextBlock Text="Id de Banda" Margin="3" VerticalAlignment="Center" />
+                        <TextBox x:Name="BandIDsTextBox" Text="3" Width="50" InputScope="Number" Margin="10,10" />
+                        <TextBox x:Name="BandIDsTextBox1" Text="1" Width="50" InputScope="Number" Margin="10,10" />
+                        <TextBox x:Name="BandIDsTextBox2" Text="2" Width="50" InputScope="Number" Margin="10,10" />
+                    </StackPanel>
+                    <TextBlock x:Name="ValidBandIdsTextBlock" Text="3 bands must be defined" Foreground="Red" 
+                                       Visibility="Collapsed" />
+                </StackPanel>
+                <Button Content="Aplicar" Margin="0,5,5,0" Click="ApplyButton_Click"  HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarToggleButton Label="Opciones" Icon="List" Click="ShowHideStretchOptions"/>
+            <AppBarButton Label="Ayuda" Icon="Help">
+                <AppBarButton.Flyout>
+                    <Flyout>
+                        <StackPanel Orientation="Vertical" Height="150">
+                            <TextBlock Text="Extender" Margin="5" FontSize="20" FontWeight="Bold"/>
+                            <TextBlock Margin="10" HorizontalAlignment="Left" FontSize="15" TextWrapping="WrapWholeWords" >
+                                - Use el botón opciones para mostrar/ocultar las opciones.<LineBreak/>
+                                <LineBreak/>
+                                - Seleccione los parametros y aplique los cambios al servicio de imágen.<LineBreak/>
+                            </TextBlock>
+                        </StackPanel>
+                    </Flyout>
+                </AppBarButton.Flyout>
+            </AppBarButton>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>
