@@ -54,7 +54,7 @@
                             <TextBlock Margin="10" HorizontalAlignment="Left" FontSize="15" TextWrapping="WrapWholeWords" >
                                 - Use el botón opciones para mostrar/ocultar las opciones.<LineBreak/>
                                 <LineBreak/>
-                                - Seleccione los parametros y aplique los cambios al servicio de imágen.<LineBreak/>
+                                - Seleccione los parámetros y aplique los cambios al servicio de imágen.<LineBreak/>
                             </TextBlock>
                         </StackPanel>
                     </Flyout>

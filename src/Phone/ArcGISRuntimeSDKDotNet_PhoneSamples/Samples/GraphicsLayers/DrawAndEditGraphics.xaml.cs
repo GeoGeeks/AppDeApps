@@ -24,7 +24,7 @@ namespace ArcGISRuntimeSDKDotNet_StoreSamples.Samples
 	/// <summary>
 	/// 
 	/// </summary>
-    /// <title>Dibijar y Editar</title>
+    /// <title>Dibujar y Editar</title>
     /// <category>Gráficos</category>
 	public sealed partial class DrawAndEditGraphics : Page
     {

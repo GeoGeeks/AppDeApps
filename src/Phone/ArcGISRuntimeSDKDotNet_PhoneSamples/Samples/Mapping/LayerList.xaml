@@ -15,7 +15,7 @@
             <esriLayers:ArcGISTiledMapServiceLayer DisplayName="Mapa Base"
 				ServiceUri="http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer" />
 
-            <esriLayers:ArcGISDynamicMapServiceLayer DisplayName="Petroleo" Opacity=".35"
+            <esriLayers:ArcGISDynamicMapServiceLayer DisplayName="Petróleo" Opacity=".35"
 				ServiceUri="http://54.187.22.10:6080/arcgis/rest/services/Win_Phone_y_Runtime/Petroleo_en_Colombia_para_el_a%C3%B1o_2006/MapServer" />
 
             <!--<lyr:GroupLayer DisplayName="Fire GroupLayer">-->

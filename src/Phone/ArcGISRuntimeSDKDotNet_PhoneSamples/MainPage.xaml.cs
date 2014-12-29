@@ -27,9 +27,19 @@ namespace ArcGISRuntimeSDKDotNet_PhoneSamples
         public MainPage()
         {
 			// Define symbology path to Resources folder. This folder is included in the solution as a Content
-			if (!ArcGISRuntimeEnvironment.IsInitialized)
-				ArcGISRuntimeEnvironment.SymbolsPath = @"arcgisruntime" + GetRuntimeVersionNumber() + @"\resources\symbols";
-           
+            if (!ArcGISRuntimeEnvironment.IsInitialized)
+            {
+                ArcGISRuntimeEnvironment.SymbolsPath = @"arcgisruntime" + GetRuntimeVersionNumber() + @"\resources\symbols";
+                Esri.ArcGISRuntime.ArcGISRuntimeEnvironment.ClientId = "BfhTjgKdHlqHWcrp";
+                try
+                {
+                    Esri.ArcGISRuntime.ArcGISRuntimeEnvironment.Initialize();
+                }
+                catch (Exception ex)
+                {
+                    var _x = new MessageDialog("No se puede inicializar el Id de cliente. " + ex.Message).ShowAsync();
+                }
+            }
 			this.InitializeComponent();
             
             if(IdentityManager.Current.Credentials.Count()>0)

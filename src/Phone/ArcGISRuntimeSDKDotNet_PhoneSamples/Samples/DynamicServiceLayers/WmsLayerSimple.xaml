@@ -19,7 +19,7 @@
                         <StackPanel Orientation="Vertical" Height="150">
                             <TextBlock Text="Capa WMS" Margin="5" FontSize="20" FontWeight="Bold"/>
                             <TextBlock Margin="10" HorizontalAlignment="Left" FontSize="15" TextWrapping="WrapWholeWords" >
-                                - Muestra una capa WMS del petroleo en Colombia para el año 2006.<LineBreak/>
+                                - Muestra una capa WMS del petróleo en Colombia para el año 2006.<LineBreak/>
                             </TextBlock>
                         </StackPanel>
                     </Flyout>

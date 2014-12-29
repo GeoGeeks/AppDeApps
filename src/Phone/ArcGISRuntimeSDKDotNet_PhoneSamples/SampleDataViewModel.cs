@@ -12,7 +12,7 @@ namespace ArcGISRuntimeSDKDotNet_PhoneSamples
 {
     internal class SampleDataViewModel : INotifyPropertyChanged
     {
-        private const string AGOL_SAMPLE_DATA_URL = "http://juanrios.maps.arcgis.com/sharing/rest/content/items/08dff4d063bb476abaa2fc14f29023b7/data?token=q_KZ0Hne-jRcw46RDdIv6mvmTpFOi6EptsrDERu8nmG191dLMjdDoXfHtSsipif9fuAWLKWtO66L9FKU03VcHbeFpNpG70c6Jzq4za-8x5GXDYMexMfE2Kma8VmFN2w-LLPJC-yAArfrHcICKBvKl53n86ZFF29dBWnoXIOGHELq3a2YvkafXEmNBU9Aprm_"; //"http://www.arcgis.com/sharing/content/items/698cf2dd47994e169353bf997b3ab1d8/data";
+        private const string AGOL_SAMPLE_DATA_URL = "http://industry-esri-co.maps.arcgis.com/sharing/rest/content/items/ab8e18bc262e4dfa90af2f93c32e4698/data"; //"http://www.arcgis.com/sharing/content/items/698cf2dd47994e169353bf997b3ab1d8/data";
 		private const string NotDownloadedString = "Nunca";
 
 		// Flag to indicate whether data has been previously downloaded

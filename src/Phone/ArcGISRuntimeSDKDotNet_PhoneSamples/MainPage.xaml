@@ -68,7 +68,7 @@
                             <!-- Section header -->
                             <TextBlock Style="{StaticResource TitleTextBlockStyle}"
 								   FontWeight="Bold"
-								   Text="Datos Locas" Margin="0,0,0,10" />
+								   Text="Datos Locales" Margin="0,0,0,10" />
 
                             <TextBlock Text="Algunos ejemplos requieren datos locales en el dispositivo. Seleccione 'Descargar Datos' para descargar los datos más recientes de esta aplicación."
 							Style="{StaticResource BodyTextBlockStyle}" />

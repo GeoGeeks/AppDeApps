@@ -14,7 +14,7 @@ namespace ArcGISRuntimeSDKDotNet_PhoneSamples.Samples
 	/// <summary>
 	///
 	/// </summary>
-	/// <title>Geocodificación Reversa</title>
+	/// <title>Geocodificación Inversa</title>
 	/// <category>Geocodificación</category>
 	public sealed partial class ReverseGeocode : Page
 	{

@@ -108,7 +108,7 @@
                         <StackPanel Orientation="Vertical" Height="150">
                             <TextBlock Text="Lista de Subcapas" Margin="5" FontSize="20" FontWeight="Bold"/>
                             <TextBlock Margin="10" HorizontalAlignment="Left" FontSize="15" TextWrapping="WrapWholeWords" >
-                                - Use el botón 'Capas' para mostrar slas capas del servicio.<LineBreak/>
+                                - Use el botón 'Capas' para mostrar las capas del servicio.<LineBreak/>
                                 <LineBreak/>
                                 - Seleccione las capas que desea ver.<LineBreak/>
                             </TextBlock>
