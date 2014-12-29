@@ -41,9 +41,13 @@ namespace ArcGISRuntimeSDKDotNet_PhoneSamples
                 }
             }
 			this.InitializeComponent();
-            
-            if(IdentityManager.Current.Credentials.Count()>0)
+
+            if (IdentityManager.Current.Credentials.Count() > 0)
+            {
                 LoginGrid.Visibility = Visibility.Collapsed;
+                CBar.Visibility = Visibility.Visible;
+            }
+                
 			
 			_sampleDataVM = new SampleDataViewModel();
 			SampleDataPanel.DataContext = _sampleDataVM;
@@ -306,6 +310,7 @@ namespace ArcGISRuntimeSDKDotNet_PhoneSamples
 
                 //_portal = await ArcGISPortal.CreateAsync(new Uri(DEFAULT_SERVER_URL));
                 LoginGrid.Visibility = Visibility.Collapsed;
+                CBar.Visibility = Visibility.Visible;
             }
             catch
             {
@@ -321,6 +326,7 @@ namespace ArcGISRuntimeSDKDotNet_PhoneSamples
             LoginGrid.Visibility = Visibility.Visible;
             progress.Visibility = Visibility.Collapsed;
             connectButton.Visibility = Visibility.Visible;
+            CBar.Visibility = Visibility.Collapsed;
         }
     }
 

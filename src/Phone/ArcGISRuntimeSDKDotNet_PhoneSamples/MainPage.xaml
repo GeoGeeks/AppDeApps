@@ -57,8 +57,18 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top" Orientation="Horizontal">
-            <AppBarButton x:Name="LogOut" Icon="BlockContact" Label="Cerrar Sesión" Click="LogOut_Click" />
+        <Grid x:Name="LoginGrid">
+            <Image Source="/Assets/SplashScreen.scale-240.png" Stretch="Fill"></Image>
+            <StackPanel Orientation="Vertical" VerticalAlignment="Top" Width="300" Margin="0,150,0,0">
+                <TextBox x:Name="UserTextBox" Header="Usuario"></TextBox>
+                <PasswordBox x:Name="PasswordTextBox" Header="Contraseña"></PasswordBox>
+                <Button x:Name="connectButton" Content="Entrar" HorizontalAlignment="Center" Click="LoginButton_Click"></Button>
+                <ProgressBar x:Name="progress" Grid.Row="1" IsIndeterminate="True" Visibility="Collapsed" Margin="12" />
+            </StackPanel>
+        </Grid>
+	</Grid>
+    <Page.BottomAppBar>
+        <CommandBar x:Name="CBar" Visibility="Collapsed">
             <AppBarButton x:Name="SampleDataPanel" Icon="Download" Label="Datos"
 					  VerticalAlignment="Top" HorizontalAlignment="Right"
 					  Foreground="{Binding HasData, Converter={StaticResource BoolToGreenRedConverter}}">
@@ -101,15 +111,23 @@
                     </Flyout>
                 </AppBarButton.Flyout>
             </AppBarButton>
-        </StackPanel>
-        <Grid x:Name="LoginGrid">
-            <Image Source="/Assets/SplashScreen.scale-240.png" Stretch="Fill"></Image>
-            <StackPanel Orientation="Vertical" VerticalAlignment="Top" Width="300" Margin="0,150,0,0">
-                <TextBox x:Name="UserTextBox" Header="Usuario"></TextBox>
-                <PasswordBox x:Name="PasswordTextBox" Header="Contraseña"></PasswordBox>
-                <Button x:Name="connectButton" Content="Entrar" HorizontalAlignment="Center" Click="LoginButton_Click"></Button>
-                <ProgressBar x:Name="progress" Grid.Row="1" IsIndeterminate="True" Visibility="Collapsed" Margin="12" />
-            </StackPanel>
-        </Grid>
-	</Grid>
+            <AppBarButton x:Name="LogOut" Icon="BlockContact" Label="Cerrar Sesión" Click="LogOut_Click" />
+            <AppBarButton Label="Info" Icon="Help">
+                <AppBarButton.Flyout>
+                    <Flyout Placement="Full">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="App de Apps" Margin="5" FontSize="20" FontWeight="Bold"/>
+                            <TextBlock Margin="10" HorizontalAlignment="Left" FontSize="15" TextWrapping="WrapWholeWords" >                                          
+                                - Este proyecto contiene ejemplos para el ArcGIS Runtime SDK para .NET (Windows Phone 8.1).<LineBreak/>
+                                <LineBreak/>
+                                - Aplicación adaptada por el grupo Semillero de Innovación Geográfica (SIG) de Esri Colombia.<LineBreak/>
+                                <LineBreak/>
+                                - Para mayor información consulte <Hyperlink NavigateUri="https://github.com/GeoGeeks/AppDeApps">https://github.com/GeoGeeks/AppDeApps</Hyperlink> <LineBreak/>
+                            </TextBlock>
+                        </StackPanel>
+                    </Flyout>
+                </AppBarButton.Flyout>
+            </AppBarButton>
+        </CommandBar>
+    </Page.BottomAppBar>
 </Page>
