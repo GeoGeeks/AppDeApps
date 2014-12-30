@@ -1,0 +1,790 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ArcGISRuntimeSDKDotNet_PhoneSamples</name>
+    </assembly>
+    <members>
+        <member name="T:ArcGISRuntimeSDKDotNet_PhoneSamples.App">
+            <summary>
+            Provides application-specific behavior to supplement the default Application class.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_PhoneSamples.App.#ctor">
+            <summary>
+            Initializes the singleton application object.  This is the first line of authored code
+            executed, and as such is the logical equivalent of main() or WinMain().
+            </summary>
+        </member>
+        <member name="F:ArcGISRuntimeSDKDotNet_PhoneSamples.App._continuationManager">
+            <summary>
+            For handling FileOpenPicker.PickSingleFileAndContinue
+            Reference: http://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn614994.aspx
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_PhoneSamples.App.OnLaunched(Windows.ApplicationModel.Activation.LaunchActivatedEventArgs)">
+            <summary>
+            Invoked when the application is launched normally by the end user.  Other entry points
+            will be used when the application is launched to open a specific file, to display 
+            search results, and so forth.
+            </summary>
+            <param name="e">Details about the launch request and process.</param>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_PhoneSamples.App.RootFrame_FirstNavigated(System.Object,Windows.UI.Xaml.Navigation.NavigationEventArgs)">
+            <summary>
+            Restores the content transitions after the app has launched.
+            </summary>
+            <param name="sender">The object where the handler is attached.</param>
+            <param name="e">Details about the navigation event.</param>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_PhoneSamples.App.OnSuspending(System.Object,Windows.ApplicationModel.SuspendingEventArgs)">
+            <summary>
+            Invoked when application execution is being suspended.  Application state is saved
+            without knowing whether the application will be terminated or resumed with the contents
+            of memory still intact.
+            </summary>
+            <param name="sender">The source of the suspend request.</param>
+            <param name="e">Details about the suspend request.</param>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_PhoneSamples.BooleanToVisibilityConverter">
+            <summary>Convert between boolean and visibility</summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_PhoneSamples.BooleanToVisibilityConverter.Convert(System.Object,System.Type,System.Object,System.String)">
+            <summary>Convert bool or bool? to Visibility</summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_PhoneSamples.BooleanToVisibilityConverter.ConvertBack(System.Object,System.Type,System.Object,System.String)">
+            <summary>Convert Visibility to boolean</summary>
+        </member>
+        <member name="P:ArcGISRuntimeSDKDotNet_PhoneSamples.MainPage.Sample.RequiresSymbols">
+            <summary>
+            Defines if the sample needs symbol to work. 
+            </summary>
+            <remarks>This is used for samples that need something to being deployed like military symbology or S57 symbology.</remarks>
+        </member>
+        <member name="P:ArcGISRuntimeSDKDotNet_PhoneSamples.MainPage.Sample.RequiresLocalData">
+            <summary>
+            Defines if the sample needs local data to work.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_PhoneSamples.SampleDataViewModel.#ctor">
+            <summary>Initialize SampleDataViewModel class</summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_PhoneSamples.SampleDataViewModel.DownloadLocalDataAsync">
+            <summary>Downloads a .zip file from online URL and extracts it to the App Local Foilder</summary>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.DynamicAndTile">
+            <summary>
+            
+            </summary>
+          <title>Dinámico y Cachado</title>
+            <category>Servicios Dinámicos</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.DynamicLayersInCode">
+            <summary>
+            
+            </summary>
+          <title>Modificación en Código</title>
+            <category>Servicios Dinámicos</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.DynamicLayersInXAML">
+            <summary>
+            
+            </summary>
+          <title>Modificación en XAML</title>
+            <category>Servicios Dinámicos</category>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.DynamicLayersInXAML.OnNavigatedTo(Windows.UI.Xaml.Navigation.NavigationEventArgs)">
+            <summary>
+            Invoked when this page is about to be displayed in a Frame.
+            </summary>
+            <param name="e">Event data that describes how this page was reached.  The Parameter
+            property is typically used to configure the page.</param>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.RasterFunctions">
+            <summary>
+            
+            </summary>
+          <title>Funciones Raster</title>
+            <category>Servicios Dinámicos</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.ShadedReliefSlope">
+            <summary>
+            
+            </summary>
+          <title>Relieve y Pendiente</title>
+            <category>Servicios Dinámicos</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.Stretch">
+            <summary>
+            
+            </summary>
+          <title>Extender</title>
+            <category>Servicios Dinámicos</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.SubLayerList">
+            <summary>
+            
+            </summary>
+          <title>Lista de Subcapas</title>
+            <category>Servicios Dinámicos</category>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.SubLayerList.OnNavigatedTo(Windows.UI.Xaml.Navigation.NavigationEventArgs)">
+            <summary>
+            Invoked when this page is about to be displayed in a Frame.
+            </summary>
+            <param name="e">Event data that describes how this page was reached.  The Parameter
+            property is typically used to configure the page.</param>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.WmsLayerSimple">
+            <summary>
+            
+            </summary>
+          <title>Capa WMS</title>
+            <category>Servicios Dinámicos</category>
+        </member>
+        
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.ExplicitSave.AddButton_Click(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Adds new feature on tap.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.ExplicitSave.SaveButton_Click(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Saves accumulated edits.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.ExplicitSave.CancelButton_Click(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Cancels accumulated edits.
+            </summary>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.EditRelatedData">
+            <summary>
+            Demonstrates how to query and edit related records.
+            </summary>
+          <title>Editar Datos Relacionados</title>
+            <category>Editar</category>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.EditRelatedData.MyMapView_MapViewTapped(System.Object,Esri.ArcGISRuntime.Controls.MapViewInputEventArgs)">
+            <summary>
+            Identifies graphic to highlight and query its related records.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.EditRelatedData.SetRelatedRecordEditor(System.Int64,System.String)">
+            <summary>
+            Prepares related record editor for add and query.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.EditRelatedData.SetAttributeEditor(Esri.ArcGISRuntime.Data.Feature)">
+            <summary>
+            Prepares attribute editor for update or delete of existing related record.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.EditRelatedData.GetRangeValues(System.Int32,System.Int32)">
+            <summary>
+            Gets exclusive values between minimum and maximum values.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.EditRelatedData.GetRelationshipAsync">
+            <summary>
+            Gets relationship information using service metadata.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.EditRelatedData.QueryRelatedRecordsAsync">
+            <summary>
+            Queries related records for specified feature ID.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.EditRelatedData.SaveEditsAsync">
+            <summary>
+            Submits related record edits back to server.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.EditRelatedData.GetRelatedTableAsync">
+            <summary>
+            Gets related table for editing.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.EditRelatedData.RelatedRecords_SelectionChanged(System.Object,Windows.UI.Xaml.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Displays current attribute values of related record.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.EditRelatedData.AddButton_Click(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Adds a new related record to highlighted feature.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.EditRelatedData.EditButton_Click(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Updates attributes of related record.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.EditRelatedData.DeleteButton_Click(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Deletes related record.
+            </summary>
+        </member>
+        
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.OwnershipBasedEditing.GetCredentialAsync(Esri.ArcGISRuntime.Security.CredentialRequestInfo)">
+            <summary>
+            Forwards credential request info using Dispatcher to enable access to UI elements.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.OwnershipBasedEditing.GetCredentialUIAsync(Esri.ArcGISRuntime.Security.CredentialRequestInfo)">
+            <summary>
+            Initializes UI and login task with credential request info.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.OwnershipBasedEditing.SignInButton_Click(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Attempts to generate credential for service to set login task result.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.OwnershipBasedEditing.SignOut">
+            <summary>
+            Removes credential used to access the service and adds a new instance of layer to trigger another challenge.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.OwnershipBasedEditing.SignOutButton_Click(System.Object,Windows.UI.Xaml.RoutedEventArgs)" -->
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.OwnershipBasedEditing.MyMapView_LayerLoaded(System.Object,Esri.ArcGISRuntime.Controls.LayerLoadedEventArgs)">
+            <summary>
+            Updates login information based on credential.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.OwnershipBasedEditing.MyMapView_LayerUnloaded(System.Object,Esri.ArcGISRuntime.Controls.LayerUnloadedEventArgs)" -->
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.OwnershipBasedEditing.MyMapView_MapViewTapped(System.Object,Esri.ArcGISRuntime.Controls.MapViewInputEventArgs)">
+            <summary>
+            Selects feature and checks whether update or delete is allowed.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.OwnershipBasedEditing.AddButton_Click(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Adds a new turtle feature owned by current user.
+            </summary>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.EditAttachment">
+            <summary>
+            Demonstrates how to update feature attachments in feature layer.
+            </summary>
+          <title>Editar Adjunto</title>
+            <category>Editar</category>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.EditAttachment.MyMapView_MapViewTapped(System.Object,Esri.ArcGISRuntime.Controls.MapViewInputEventArgs)">
+            <summary>
+            Selects feature for editing and query its attachments.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.EditAttachment.SetAttachmentEditor(System.Int64,System.Collections.Generic.IReadOnlyList{Esri.ArcGISRuntime.Data.AttachmentInfoItem})">
+            <summary>
+            Prepares attachment editor for editing.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.EditAttachment.SaveEditsAsync">
+            <summary>
+            Submits attachment edits back to server.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.EditAttachment.QueryAttachmentsAsync(System.Int64)">
+            <summary>
+            Query attachments of specified feature.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.EditAttachment.GetFileAsync">
+            <summary>
+            Prompts user to pick file from pictures folder.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.EditAttachment.AddButton_Click(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Adds new attachment to feature.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.EditAttachment.OpenButton_Click(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Opens the specified attachment.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.EditAttachment.UpdateButton_Click(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Updates the specified attachment of feature.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.EditAttachment.DeleteButton_Click(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Deletes the specified attachment from feature.
+            </summary>
+        </member>
+        
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.FeatureLayerEditGeometry.MyMapView_MapViewTapped(System.Object,Esri.ArcGISRuntime.Controls.MapViewInputEventArgs)">
+            <summary>
+            Selects feature for editing.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.FeatureLayerEditGeometry.SetGeometryEditor(Esri.ArcGISRuntime.Data.Feature)">
+            <summary>
+            Prepares GeometryEditor for editing.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.FeatureLayerEditGeometry.EditButton_Click(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Enables geometry editing and submits geometry edit back to the server.
+            </summary>
+        </member>
+       
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.FeatureLayerEditAttribute.MyMapView_MapViewTapped(System.Object,Esri.ArcGISRuntime.Controls.MapViewInputEventArgs)">
+            <summary>
+            Selects feature for editing.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.FeatureLayerEditAttribute.GetChoices">
+            <summary>
+            Returns choice list for attribute editing.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.FeatureLayerEditAttribute.SetAttributeEditor(Esri.ArcGISRuntime.Data.Feature)">
+            <summary>        
+            Prepares AttributeEditor for editing.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.FeatureLayerEditAttribute.ChoiceList_SelectionChanged(System.Object,Windows.UI.Xaml.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Enables attribute editing and submits attribute edit back to the server.
+            </summary>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.DynamicLayerEditGeometry">
+            <summary>
+            Demonstrates how to selectively import and update feature geometry in dynamic layer.
+            </summary>
+          <title>Editar Geometría</title>
+            <category>Editar</category>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.DynamicLayerEditGeometry.MyMapView_MapViewTapped(System.Object,Esri.ArcGISRuntime.Controls.MapViewInputEventArgs)">
+            <summary>
+            Identifies feature to highlight.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.DynamicLayerEditGeometry.SetGeometryEditor(System.Int64)">
+            <summary>
+            Prepares GeometryEditor for editing.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.DynamicLayerEditGeometry.EditButton_Click(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Enables geometry editing, submits geometry edit back to the server and refreshes dynamic layer.
+            </summary>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.DynamicLayerEditAttribute">
+            <summary>
+            Demonstrates how to selectively import and update feature attributes in dynamic layer.
+            </summary>
+          <title>Editar Atributo</title>
+            <category>Editar</category>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.DynamicLayerEditAttribute.MyMapView_MapViewTapped(System.Object,Esri.ArcGISRuntime.Controls.MapViewInputEventArgs)">
+            <summary>
+            Identifies feature to highlight.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.DynamicLayerEditAttribute.GetChoicesAsync">
+            <summary>
+            Returns choice list for attribute editing.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.DynamicLayerEditAttribute.SetAttributeEditor(System.Int64,System.String)">
+            <summary>        
+            Prepares AttributeEditor for editing.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.DynamicLayerEditAttribute.ChoiceList_SelectionChanged(System.Object,Windows.UI.Xaml.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Enables attribute editing, submits attribute edit back to the server and refreshes dynamic layer.
+            </summary>
+        </member>
+
+        <member name="T:ArcGISRuntimeSDKDotNet_PhoneSamples.Samples.FindPlace">
+          <summary>
+
+          </summary>
+          <title>Encontrar Lugar</title>
+          <category>Geocodificación</category>
+        </member>
+      <member name="T:ArcGISRuntimeSDKDotNet_PhoneSamples.Samples.GeocodeAddress">
+        <summary>
+
+        </summary>
+        <title>Geocodificar Dirección</title>
+        <category>Geocodificación</category>
+      </member>
+      <member name="T:ArcGISRuntimeSDKDotNet_PhoneSamples.Samples.ReverseGeocode">
+        <summary>
+
+        </summary>
+        <title>Geocodificación Inversa</title>
+        <category>Geocodificación</category>
+      </member>
+      
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.AreaSample">
+            <summary>
+            
+            </summary>
+          <title>Área</title>
+            <category>Geometría</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.BufferPoint">
+            <summary>
+            
+            </summary>
+          <title>Punto de Buffer</title>
+            <category>Geometría</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.CutPolygons">
+            <summary>
+            
+            </summary>
+          <title>Cortar Polígonos</title>
+            <category>Geometría</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.DensifyPolygons">
+            <summary>
+            
+            </summary>
+          <title>Densificar Polígonos</title>
+            <category>Geometría</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.Difference">
+            <summary>
+            
+            </summary>
+          <title>Diferencia</title>
+            <category>Geometría</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.Distance">
+            <summary>
+            
+            </summary>
+          <title>Distancia</title>
+            <category>Geometría</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.Generalize">
+            <summary>
+            
+            </summary>
+          <title>Generalizar</title>
+            <category>Geometría</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.GeodesicBuffer">
+            <summary>
+            
+            </summary>
+          <title>Buffer Geodésico</title>
+            <category>Geometría</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.Intersect">
+            <summary>
+            
+            </summary>
+          <title>Intersectar</title>
+            <category>Geometría</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_PhoneSamples.Samples.LabelPoints">
+            <summary>
+            
+            </summary>
+          <title>Etiqueta</title>
+            <category>Geometría</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.LineLength">
+            <summary>
+            
+            </summary>
+          <title>Longitud de Línea</title>
+            <category>Geometría</category>
+        </member>
+        
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.ComputeClassStatistics.#ctor">
+            <summary>Construct compute class statistics sample control</summary>
+        </member>
+        
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.GetSamples.#ctor">
+            <summary>Construct Get Image Samples sample control</summary>
+        </member>
+        
+        <member name="M:ArcGISRuntimeSDKDotNet_DesktopSamples.Samples.Mensuration.#ctor">
+            <summary>Construct Mensuration sample control</summary>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_PhoneSamples.Samples.InteractionOptionsSample">
+            <summary>
+            This sample shows how to change interaction settings that controls the MapView.
+            </summary>
+            <title>Opciones de Interacción</title>
+            <category>Cartografía</category>
+        </member>
+        
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.CreateWebMap.#ctor">
+            <summary>Construct Create WebMap sample page</summary>
+        </member>
+        
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.PortalBasemaps.#ctor">
+            <summary>Construct Portal Basemaps sample control</summary>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.Offset">
+            <summary>
+            
+            </summary>
+            <category>Geometría</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_PhoneSamples.Samples.CalculateViewshed">
+            <summary>
+            
+            </summary>
+          <title>Cuenca Visual</title>
+            <category>Geoprocesamiento</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.ClipFeatures">
+            <summary>
+            
+            </summary>
+          <title>Recortar Componentes</title>
+            <category>Geoprocesamiento</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.DriveTimes">
+            <summary>
+            
+            </summary>
+          <title>Tiempo de Conducción</title>
+            <category>Geoprocesamiento</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.MessageInABottle">
+            <summary>
+            
+            </summary>
+          <title>Mensaje en una Botella</title>
+            <category>Geoprocesamiento</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.AddPointOnTap">
+            <summary>
+            
+            </summary>
+          <title>Agregar Punto</title>
+            <category>Gráficos</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.CsvLayerSimple">
+            <summary>
+            
+            </summary>
+          <title>Capa CSV Simple</title>
+            <category>Gráficos</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.DrawAndEditGraphics">
+            <summary>
+            
+            </summary>
+          <title>Dibujar y Editar</title>
+            <category>Gráficos</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.MovePoints">
+            <summary>
+            
+            </summary>
+          <title>Mover Puntos</title>
+            <category>Gráficos</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.EnableTouchRotation">
+            <summary>
+            
+            </summary>
+          <title>Rotación</title>
+            <category>Cartografía</category>
+        </member>
+
+      
+      <member name="T:ArcGISRuntimeSDKDotNet_PhoneSamples.Samples.LoadWebMap">
+        <summary>
+
+        </summary>
+        <title>Cargar Webmap</title>
+        <category>Portal</category>
+      </member>
+
+      <member name="T:ArcGISRuntimeSDKDotNet_PhoneSamples.Samples.PortalBasemaps">
+        <summary>
+
+        </summary>
+        <title>Mapas Base</title>
+        <category>Portal</category>
+      </member>
+
+      <member name="T:ArcGISRuntimeSDKDotNet_PhoneSamples.Samples.PortalSearch">
+        <summary>
+
+        </summary>
+        <title>Búsqueda</title>
+        <category>Portal</category>
+      </member>    
+      
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.LayerList">
+            <summary>
+            
+            </summary>
+          <title>Lista de Capas</title>
+            <category>Cartografía</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.LocationDisplay">
+            <summary>
+            
+            </summary>
+          <title>Ubicación</title>
+            <category>Cartografía</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.RandomProvider">
+            <summary>
+            This is serves as a custom location provider - in this case creating a randomly roaming location
+            for simulating movement, accuracy, speed and heading changes.
+            </summary>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.MapProperties">
+            <summary>
+            
+            </summary>
+          <title>Propiedades</title>
+            <category>Cartografía</category>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.ProjectionConverter.Convert(System.Object,System.Type,System.Object,System.String)">
+            <summary>
+            Converter for converting a geometry from one projection to another.
+            The input geometry must have a spatial reference defined, and the converter parameter
+            must but the Well-Known ID or the Well-Known text for the output spatial reference.
+            </summary>
+            <seealso cref="T:Esri.ArcGISRuntime.Geometry.GeometryEngine"/>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.ProjectionConverter.ConvertBack(System.Object,System.Type,System.Object,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="language"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException">The requestUri was null.</exception>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.OverviewMap">
+            <summary>
+            
+            </summary>
+          <title>Vista General</title>
+            <category>Cartografía</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.SimpleMapTip">
+            <summary>
+            
+            </summary>
+          <title>Leyenda Simple</title>
+            <category>Cartografía</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.SwitchBasemaps">
+            <summary>
+            
+            </summary>
+          <title>Mapa Base</title>
+            <category>Cartografía</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.DrivingDirections">
+            <summary>
+            
+            </summary>
+          <title>Direcciones de Conducción</title>
+            <category>Análisis de Redes</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_PhoneSamples.Samples.Routing">
+            <summary>
+            
+            </summary>
+          <title>Ruteo</title>
+            <category>Análisis de Redes</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_PhoneSamples.Samples.RoutingWithBarriers">
+            <summary>
+            
+            </summary>
+          <title>Ruteo con Barreras</title>
+            <category>Análisis de Redes</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.AttributeQuery">
+            <summary>
+            
+            </summary>
+          <title>Consulta de Atributos</title>
+            <category>Tareas de Consulta</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.Identify">
+            <summary>
+            
+            </summary>
+          <title>Identificar</title>
+            <category>Tareas de Consulta</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_PhoneSamples.Samples.QueryOnly">
+            <summary>
+            
+            </summary>
+          <title>Consulta Simple</title>
+            <category>Tareas de Consulta</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_PhoneSamples.Samples.QueryRelatedRecords">
+            <summary>
+            
+            </summary>
+          <title>Registros Relacionados</title>
+            <category>Tareas de Consulta</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.QueryWithBuffer">
+            <summary>
+            
+            </summary>
+          <title>Consulta con Buffer</title>
+            <category>Tareas de Consulta</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.Statistics">
+            <summary>
+            
+            </summary>
+          <title>Estadísticas</title>
+            <category>Tareas de Consulta</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_PhoneSamples.Samples.ArcGISLocalTiledLayerSample">
+            <summary>
+            Demonstrates adding a local tiled layer from a tile package (.tpk) to a map.
+            </summary>
+            <title>Capa Cachada Local</title>
+            <category>Capas Cachadas</category>
+            <localdata>true</localdata>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_PhoneSamples.Samples.ArcGISLocalTiledLayerSample.GetSingleFileAsync(System.String)">
+            <summary>
+            Get a single file from the user
+            </summary>
+            <remarks>Copies the selected file to App Local Data before returning</remarks>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_StoreSamples.Samples.WebTiledLayerSample">
+            <summary>
+            Demonstrates adding a Web tiled layer to a Map in XAML, and changing layer properties in code behind.
+            Also demonstrates including Attribution as per Terms of Use for the various layers. 
+            </summary>
+            <title>Capa Web Cachada</title>
+            <category>Capas Cachadas</category>
+        </member>
+        <member name="T:ArcGISRuntimeSDKDotNet_PhoneSamples.SdkInstallNeededPage">
+            <summary>
+            An empty page that can be used on its own or navigated to within a Frame.
+            </summary>
+        </member>
+        <member name="M:ArcGISRuntimeSDKDotNet_PhoneSamples.SdkInstallNeededPage.OnNavigatedTo(Windows.UI.Xaml.Navigation.NavigationEventArgs)">
+            <summary>
+            Invoked when this page is about to be displayed in a Frame.
+            </summary>
+            <param name="e">Event data that describes how this page was reached.
+            This parameter is typically used to configure the page.</param>
+        </member>
+    </members>
+</doc>
