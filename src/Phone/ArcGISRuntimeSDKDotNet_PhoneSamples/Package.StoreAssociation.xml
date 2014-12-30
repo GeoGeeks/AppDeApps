@@ -194,5 +194,11 @@
     <MainPackageIdentityName>24198marceloctorres.CursoWP81Capitulo3</MainPackageIdentityName>
     <MainPackageIdentityName>24198marceloctorres.EsriColombia</MainPackageIdentityName>
   </AccountPackageIdentityNames>
-  <PackageInfoList LandingUrl="https://dev.windowsphone.com/AppSubmission/AssociationLanding?windowsProductId=6e6bfb5e-a7e6-4a91-8e17-5d0152e675b2" />
+  <PackageInfoList LandingUrl="https://dev.windowsphone.com/AppSubmission/AssociationLanding?windowsProductId=6e6bfb5e-a7e6-4a91-8e17-5d0152e675b2">
+    <PackageInfo>
+      <OsMinVersion>6.3.0.0</OsMinVersion>
+      <PackageArchitecture>arm</PackageArchitecture>
+      <PackageMaxArchitectureVersion>1.1.0.1</PackageMaxArchitectureVersion>
+    </PackageInfo>
+  </PackageInfoList>
 </StoreAssociation>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-  <Identity Name="24198marceloctorres.AppdeApps" Publisher="CN=519E13C4-18B2-4447-817B-3D2682076655" Version="1.1.0.1" />
+  <Identity Name="24198marceloctorres.AppdeApps" Publisher="CN=519E13C4-18B2-4447-817B-3D2682076655" Version="1.1.0.2" />
   <mp:PhoneIdentity PhoneProductId="4508e97a-4034-47ea-96d9-fab9043811c2" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>App de Apps</DisplayName>
