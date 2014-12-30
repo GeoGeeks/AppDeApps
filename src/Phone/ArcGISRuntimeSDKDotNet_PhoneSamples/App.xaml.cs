@@ -23,6 +23,7 @@ namespace ArcGISRuntimeSDKDotNet_PhoneSamples
         {
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
+            RequestedTheme = ApplicationTheme.Dark;
         }
 
         /// <summary>

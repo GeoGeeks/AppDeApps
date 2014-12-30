@@ -117,13 +117,15 @@
                 <AppBarButton.Flyout>
                     <Flyout Placement="Full">
                         <StackPanel Orientation="Vertical">
-                            <TextBlock Text="App de Apps" Margin="5" FontSize="20" FontWeight="Bold"/>
+                            <TextBlock Text="App de Apps Windows Phone" Margin="5" FontSize="20" FontWeight="Bold"/>
                             <TextBlock Margin="10" HorizontalAlignment="Left" FontSize="15" TextWrapping="WrapWholeWords" >                                          
-                                - Este proyecto contiene ejemplos para el ArcGIS Runtime SDK para .NET (Windows Phone 8.1).<LineBreak/>
+                                App de Apps, es una aplicación que buscar brindar todas las funcionalidades de desarrollo de aplicaciones geográficas en una sola aplicación. 
+                                Este proyecto contiene ejemplos para el ArcGIS Runtime SDK para .NET (Windows Phone 8.1). 
+                                Una vez haya validado sus credenciales de ArcGIS Online para organizaciones o ArcGIS para Desarrolladores usted podrá acceder a los principales funcionalidades ofrecidas por la tecnología de ArcGIS. <LineBreak/>
+                                <LineBreak/>                                
+                                El código está disponible para consulta y modificación en <Hyperlink NavigateUri="https://github.com/GeoGeeks/AppDeApps">https://github.com/GeoGeeks/AppDeApps</Hyperlink> <LineBreak/>
                                 <LineBreak/>
-                                - Aplicación adaptada por el grupo Semillero de Innovación Geográfica (SIG) de Esri Colombia.<LineBreak/>
-                                <LineBreak/>
-                                - Para mayor información consulte <Hyperlink NavigateUri="https://github.com/GeoGeeks/AppDeApps">https://github.com/GeoGeeks/AppDeApps</Hyperlink> <LineBreak/>
+                                Para mayor información, no olvide seguirnos en la cuenta de Twitter @geo_geeks o en el portal de desarrolladores <Hyperlink NavigateUri="http://desarrolladores.esri.co">http://desarrolladores.esri.co</Hyperlink>.<LineBreak/>
                             </TextBlock>
                         </StackPanel>
                     </Flyout>
